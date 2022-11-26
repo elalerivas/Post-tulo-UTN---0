@@ -71,8 +71,8 @@ with tab2:
         #dicColores ={'colores':colores, 'codigo':codCol}
         
         with col1:
-            x0=st.number_input('xmin',value=0.0, step=0.1)
-            xf=st.number_input('xmax',value=50.0, step=0.1)
+            x0=st.number_input('xmin',value=-10.0, step=0.1)
+            xf=st.number_input('xmax',value=10.0, step=0.1)
             resol=st.number_input('resolución',min_value=10, max_value=400,value=300, step=10)
         with col2:
             colores=['azul', 'verde', 'rojo', 'cian', 'magenta', 'amarillo', 'negro', 'blanco']
@@ -106,7 +106,7 @@ with tab2:
         reemplazo=['np.power','np.pi','np.sqrt','np.exp','np.log','np.log10','np.sin','np.cos','np.tan','np.asin',      
                                                                 'np.acos','np.atan','np.sinh','np.cosh','np.tanh','np.absolute']
 
-        funcion=st.text_input('Ingrese Funcion',placeholder='f(x) = ')    
+        funcion=st.text_input('Ingrese Funcion',placeholder='f(x) = exp(-pow(x,2))*sin(5*x)')    
         parentesis=[funcion.count('('),funcion.count(')')]
         if parentesis[0] > parentesis[1]:
             st.write('Revisar paréntesis. Falta " ) "')
@@ -118,7 +118,8 @@ with tab2:
         """
         $ \\frac{sin(x)}{x^3} $
         """
-
+        if funcion == '':
+            funcion = 'exp(-pow(x,2))*sin(5*x)'
         for i in range (0,len(func_orig)):
             
             funcion=funcion.replace(func_orig[i],reemplazo[i])
@@ -133,8 +134,7 @@ with tab2:
         #x=np.linspace(-1,4,300)
         phi = phi * np.pi/180
 
-        if funcion == '':
-            funcion = 'x'
+        
        
         st.write('f(x)=',funcion)
 
