@@ -62,9 +62,7 @@ with tab2:
     """
     f
     with tab3:
-        """
-        $ f(x) =\\frac{sin(x)}{x^{2}}$
-        """
+        
         col1, col2, col3 = st.columns(3)
         #codCol=['b','g','r','c','m','y','k','w']
         
@@ -115,9 +113,7 @@ with tab2:
 
         
         
-        """
-        $ \\frac{sin(x)}{x^3} $
-        """
+        
         if funcion == '':
             funcion = 'exp(-pow(x,2))*sin(5*x)'
         for i in range (0,len(func_orig)):
