@@ -166,28 +166,32 @@ with tab2:
         #plt.plot(x,y,c=color,ls= estilo ,marker=marca,lw=ancholin,markersize=SizeMarca,mec=colorMark, label= leyenda)
         
         ff
-        agree = st.checkbox('Mostrar ejes')
-        if agree:   
-                st.write('Great!')
-        genre = st.radio("What's your favorite movie genre",
-                        ('Comedy', 'Drama', 'Documentary'))
 
-        if genre == 'Comedy':
-            st.write('You selected comedy.')
-        else:
-            st.write("You didn't select comedy.")
-        options = st.multiselect('What are your favorite colors',
-                                  ['Green', 'Yellow', 'Red', 'Blue'],
-                                     ['Yellow', 'Red'])
+        #    pruebas   
+        
+    #    agree = st.checkbox('Mostrar ejes')
+    #    if agree:   
+    #            st.write('Great!')
+    #    genre = st.radio("What's your favorite movie genre",
+    #                   ('Comedy', 'Drama', 'Documentary'))
 
-        st.write('You selected:', options)
-        color = st.color_picker('Pick A Color', '#00f900')
-        st.write('The current color is', color)
-        import streamlit as st
+    #    if genre == 'Comedy':
+    #        st.write('You selected comedy.')
+    #    else:
+    #        st.write("You didn't select comedy.")
+    #    options = st.multiselect('What are your favorite colors',
+    #                              ['Green', 'Yellow', 'Red', 'Blue'],
+     #                                ['Yellow', 'Red'])
+
+     #   st.write('You selected:', options)
+     #   color = st.color_picker('Pick A Color', '#00f900')
+     #   st.write('The current color is', color)
+    #    import streamlit as st
        
-        """
-        picture = st.camera_input("Take a picture")
+        
+    #    picture = st.camera_input("Take a picture")
 
-        if picture:
-            st.image(picture) """""
+    #    if picture:
+    #        st.image(picture) 
+    
         
