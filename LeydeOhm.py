@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd #importo para trabajar con tablas
-import time
+#import time
 #import re
 
 
@@ -106,7 +106,7 @@ with tab2:
         reemplazo=['np.power','np.pi','np.sqrt','np.exp','np.log','np.log10','np.sin','np.cos','np.tan','np.asin',      
                                                                 'np.acos','np.atan','np.sinh','np.cosh','np.tanh','np.absolute']
 
-        funcion=st.text_input('Funcion',placeholder='Ingrese funcion f(x)')    
+        funcion=st.text_input('Ingrese Funcion',placeholder='f(x) = ')    
         parentesis=[funcion.count('('),funcion.count(')')]
         if parentesis[0] > parentesis[1]:
             st.write('Revisar paréntesis. Falta " ) "')
@@ -126,17 +126,23 @@ with tab2:
            # with st.spinner('convirtiendo a numpy...'):
            #     time.sleep(0.1)
            #     st.success('Listo!')
-        st.write('f(x)=',funcion)
+        
         
 
         x=np.linspace(x0,xf,resol)
         #x=np.linspace(-1,4,300)
         phi = phi * np.pi/180
 
+        if funcion == '':
+            funcion = 'x'
+       
+        st.write('f(x)=',funcion)
+
         exec(f'funcion={funcion}')
 
         
         y=funcion
+        
        # puntos={'x':x,'y':y}
         #tabla=pd.DataFrame(data=puntos)
 
