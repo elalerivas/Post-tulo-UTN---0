@@ -208,8 +208,8 @@ with tab1:
     tabla1
     #videos
     """#### Cómo introducir funciones    :point_down: (*ver video*) """
-    video1=open("./Videos/Video1.mp4","rb")
-    st.video(video1)
+    #video1=open("./Videos/Video1.mp4","rb")
+    st.video("https://youtu.be/g3bDNgY5KJs")
 
     """ ### Uso de parámetros
     **SimplePlot 2D** permite definir constantes a modo de parámetros en la sección correspondiente en la barra lateral.
